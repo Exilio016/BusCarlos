@@ -8,6 +8,15 @@
     color : rgb(173, 14, 14);
 }
 
+#busca{
+    text-align: center;
+    color : rgb(173, 14, 14);
+}
+
+#barralinha{
+    width: 130vh;
+}
+
 .btn-danger{
     background-color: rgb(173, 14, 14);
 }
@@ -22,7 +31,7 @@
 /* Set gray background color and 100% height */
 .sidenav {
     padding-top: 5px;
-    background-color: #f1f1f1;
+    background-color: #c7c2c2;
     height: 100%;
 }
 
