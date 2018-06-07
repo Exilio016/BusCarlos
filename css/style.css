@@ -14,7 +14,7 @@
 }
 
 #barralinha{
-    width: 130vh;
+    col
 }
 
 .btn-danger{
@@ -25,6 +25,11 @@
     background-color: #910707;
 }
 
+ .table-responsive{
+ 	 width: 80vw;
+	 overflow-y:auto;
+ }
+
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 90vh}
 
@@ -32,7 +37,7 @@
 .sidenav {
     padding-top: 5px;
     background-color: #c7c2c2;
-    height: 100%;
+   height: 100vh
 }
 
 /* Set black background color, white text and some padding */
