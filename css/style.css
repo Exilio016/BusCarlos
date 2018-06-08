@@ -2,20 +2,12 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-}
-
-#barrasuperior{
-    height: 5vh;
-}
-
-#subsuperior{
-    margin-top: 7.5vh;
+    height: 7vh;
 }
 
 #logo{
     color : rgb(173, 14, 14);
 }
-
 
 #busca{
     text-align: center;
@@ -52,19 +44,18 @@ th {
     background-color: #910707;
 }
 
- .table-responsive{
+.table-responsive{
  	 width: 80vw;
 	 overflow-y:auto;
- }
+}
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 90vh}
 
 /* Set gray background color and 100% height */
 .sidenav {
-    padding-top: 5px;
     background-color: #c7c2c2;
-   height: 92.5vh
+    height: 93vh
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
