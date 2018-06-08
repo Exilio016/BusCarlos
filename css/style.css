@@ -4,9 +4,18 @@
     border-radius: 0;
 }
 
+#barrasuperior{
+    height: 5vh;
+}
+
+#subsuperior{
+    margin-top: 5vh;
+}
+
 #logo{
     color : rgb(173, 14, 14);
 }
+
 
 #busca{
     text-align: center;
@@ -14,7 +23,14 @@
 }
 
 #barralinha{
-    col
+    border-left: 2vw;
+    border-right: 2vw;
+}
+
+#tabelalinhas{
+    padding-left: 8vw;
+    padding-right: 8vw;
+    margin-top: 10px;
 }
 
 .btn-danger{
@@ -38,13 +54,6 @@
     padding-top: 5px;
     background-color: #c7c2c2;
    height: 100vh
-}
-
-/* Set black background color, white text and some padding */
-footer {
-    background-color: #555;
-    color: white;
-    padding: 10px;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */

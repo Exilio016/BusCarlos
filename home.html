@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav id = "barrasuperior" class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -29,9 +29,9 @@
   </div>
 </nav>
   
-<div class="container-fluid text-center">    
+<div id = "subsuperior" class="container-fluid text-center">    
   <div class="row content">
-    <div class=" col-sm-3 col-md-3 col-lg-2 sidenav">
+    <div class=" col-sm-3 col-md-3 col-lg-2 sidenav ">
       <button type="button" class="btn btn-danger btn-block btn-menu">Busca por linha</button>
       <button type="button" class="btn btn-danger btn-block btn-menu">Busca por referência</button>
       <button type="button" class="btn btn-danger btn-block btn-menu">Preferidos</button>
@@ -42,21 +42,22 @@
       <h1 id = "busca" >Busca por Linha</h1>
     </div>
 
-    <div class="container col-sm-8 col-md-8 col-lg-9 ">
-			
-		<form id = "barralinha" >
-		  <div class="row">
-		    <div class="col col-sm-8 col-md-8col-lg-9">
-		      <input type="text" class="form-control" placeholder="Busca por linha">
-		    </div>
-		    <div class="col col-sm-4 col-md-4 col-lg-3">
-		     <button type="submit" class="btn btn-danger">Filtrar</button>
-		      <button type="submit" class="btn btn-danger">Buscar</button>
-		    </div>
-		  </div>
-		</form>
+    <div class="container col-sm-9 col-md-9 col-lg-10 ">
 		
-			<div  class="table-responsive" >      
+			<form id = "barralinha" >
+				<div class="row">
+					<div class="col col-sm-8 col-md-8 col-lg-9">
+						<input type="text" class="form-control" placeholder="Busca por linha">
+					</div>
+					<div class="col col-sm-4 col-md-4 col-lg-3">
+					<button type="submit" class="btn btn-danger">Filtrar</button>
+						<button type="submit" class="btn btn-danger">Buscar</button>
+					</div>
+				</div>
+			</form>
+		
+		
+			<div  id = "tabelalinhas" >      
 			  <table class="table table-striped">
 			    <thead>
 			      <tr>
