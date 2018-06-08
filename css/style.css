@@ -49,21 +49,46 @@
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 90vh}
 
+
 /* Set gray background color and 100% height */
 .sidenav {
-    padding-top: 5px;
+    padding-top: 40px;
     background-color: #c7c2c2;
-   height: 100vh
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
+
+
+
+.main-content{
+    margin-left: 25vw;
+}
+
+@media screen and (min-width: 1200px){
+    .main-content{
+        margin-left: 20vw;
+    }
+}
+
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
     .sidenav {
         height: auto;
         padding: 15px;
+        position: relative;
     }
     .row.content {height:auto;}
+
+    .main-content {
+        margin-left: 4vw;
+    }
 }
+
 
 .btn-menu{
     margin-top: 1em;
