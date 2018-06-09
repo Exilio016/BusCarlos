@@ -3,12 +3,17 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 
+const nav = [{ link: '/linhas', title: 'Busca por Linhas' },
+  { link: '/referencias', title: 'Busca por Referencia' },
+  { link: '/favoritos', title: 'Favoritos' },
+  { link: 'feed', title: 'Feed de Noticias' }];
 const app = express();
 const port = process.env.PORT || 3000;
-const linhasRouter = express.Router();
-const referenciasRouter = express.Router();
-const favoritosRouter = express.Router();
-const feedRouter = express.Router();
+
+const linhasRouter = require('./src/routes/linhasRoutes')(nav);
+const referenciasRouter = require('./src/routes/referenciasRoutes')(nav);
+const favoritosRouter = require('./src/routes/favoritosRoutes')(nav);
+const feedRouter = require('./src/routes/feedRoutes')(nav);
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
@@ -22,53 +27,5 @@ app.use('/feed', feedRouter);
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
-
-linhasRouter.route('/').get((req, res) => {
-  res.render(
-    'linhas',
-    {
-      nav: [{ link: '/linhas', title: 'Busca por Linhas' },
-        { link: '/referencias', title: 'Busca por Referencia' },
-        { link: '/preferidos', title: 'Favoritos' },
-        { link: 'feed', title: 'Feed de Noticias' }],
-    },
-  );
-});
-
-referenciasRouter.route('/').get((req, res) => {
-  res.render(
-    'referencias',
-    {
-      nav: [{ link: '/linhas', title: 'Busca por Linhas' },
-        { link: '/referencias', title: 'Busca por Referencia' },
-        { link: '/favoritos', title: 'Favoritos' },
-        { link: 'feed', title: 'Feed de Noticias' }],
-    },
-  );
-});
-
-favoritosRouter.route('/').get((req, res) => {
-  res.render(
-    'favoritos',
-    {
-      nav: [{ link: '/linhas', title: 'Busca por Linhas' },
-        { link: '/referencias', title: 'Busca por Referencia' },
-        { link: '/favoritos', title: 'Favoritos' },
-        { link: 'feed', title: 'Feed de Noticias' }],
-    },
-  );
-});
-
-feedRouter.route('/').get((req, res) => {
-  res.render(
-    'feed',
-    {
-      nav: [{ link: '/linhas', title: 'Busca por Linhas' },
-        { link: '/referencias', title: 'Busca por Referencia' },
-        { link: '/preferidos', title: 'Favoritos' },
-        { link: 'feed', title: 'Feed de Noticias' }],
-    },
-  );
-});
 
 app.listen(port, () => debug('listening on port '.concat(port)));
