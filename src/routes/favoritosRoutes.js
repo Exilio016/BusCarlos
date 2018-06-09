@@ -7,10 +7,7 @@ function router(nav) {
     res.render(
       'favoritos',
       {
-        nav: [{ link: '/linhas', title: 'Busca por Linhas' },
-          { link: '/referencias', title: 'Busca por Referencia' },
-          { link: '/favoritos', title: 'Favoritos' },
-          { link: 'feed', title: 'Feed de Noticias' }],
+        nav,
       },
     );
   });
