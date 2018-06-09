@@ -11,7 +11,7 @@ function router(nav) {
       },
     );
   });
-  return favoritosRouter;
+  return favoritosRouter; 
 }
 
 module.exports = router;
