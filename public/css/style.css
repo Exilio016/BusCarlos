@@ -2,20 +2,12 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-}
-
-#barrasuperior{
-    height: 5vh;
-}
-
-#subsuperior{
-    margin-top: 5vh;
+    height: 7vh;
 }
 
 #logo{
     color : rgb(173, 14, 14);
 }
-
 
 #busca{
     text-align: center;
@@ -23,37 +15,49 @@
 }
 
 #barralinha{
-    border-left: 2vw;
-    border-right: 2vw;
+    padding-left: 6vw;
 }
 
 #tabelalinhas{
-    padding-left: 8vw;
-    padding-right: 8vw;
+    margin-left: 8vw;
+    margin-right: 7vw;
+    padding-right: 1vw;
     margin-top: 10px;
+    overflow-y: scroll;
+    height: 70vh;
+    text-align: center;
+}
+
+th {
+    text-align: center;
 }
 
 .btn-danger{
     background-color: rgb(173, 14, 14);
 }
 
+.botao{
+    margin-left: 0px;
+}
+
 .btn-danger:hover{
     background-color: #910707;
 }
 
- .table-responsive{
+
+.table-responsive{
  	 width: 80vw;
 	 overflow-y:auto;
- }
+}
+
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 90vh}
 
 /* Set gray background color and 100% height */
 .sidenav {
-    padding-top: 5px;
     background-color: #c7c2c2;
-   height: 100vh
+    height: 93vh
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
