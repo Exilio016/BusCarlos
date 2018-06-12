@@ -67,5 +67,5 @@ typings/
 .serverless
 
 # IDEs directories
-.idea 
-.vscode
+.idea/
+.vscode/
