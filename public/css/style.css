@@ -9,17 +9,22 @@
     color : rgb(173, 14, 14);
 }
 
+#login{
+    color : rgb(173, 14, 14);
+}
+
 #busca{
     text-align: center;
     color : rgb(173, 14, 14);
 }
 
 #barralinha{
-    padding-left: 6vw;
+    padding-left: 3vw;
+    text-align : center;
 }
 
 #tabelalinhas{
-    margin-left: 8vw;
+    margin-left: 7vw;
     margin-right: 7vw;
     padding-right: 1vw;
     margin-top: 10px;
@@ -44,12 +49,10 @@ th {
     background-color: #910707;
 }
 
-
 .table-responsive{
  	 width: 80vw;
 	 overflow-y:auto;
 }
-
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 90vh}
