@@ -4,58 +4,47 @@
   <title>BusCarlos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
-<body>
 
-<nav id = "barrasuperior" class="navbar navbar-inverse  col-sm-12 col-md-12 col-lg-12 ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a id = "logo" class="navbar-brand" href="#">BusCarlos   </a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+	<nav class="navbar navbar-expand bg-dark navbar-dark col-12 col-sm-12 col-md-12 col-lg-12 ">
+		<a id = "logo" class="navbar-brand" href="#">BusCarlos</a>
+		<div class="navbar-collapse" id="collapsibleNavbar">
+			<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+				<li class="nav-item">
+					<a id = "login" class="nav-link" href="#">Login</a>
+				</li> 
+			</ul>
+		</div> 
+	</nav>
   
-<div class="container-fluid text-center">    
+<div class="container-fluid">    
   <div class="row content">
-    <div class=" col-sm-3 col-md-3 col-lg-2 sidenav ">
+    <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 sidenav ">
       <button type="button" class="btn btn-danger btn-block btn-menu">Busca por linha</button>
       <button type="button" class="btn btn-danger btn-block btn-menu">Busca por referência</button>
       <button type="button" class="btn btn-danger btn-block btn-menu">Preferidos</button>
       <button type="button" class="btn btn-danger btn-block btn-menu">Feed de noticias</button>
     </div>
 
-    <div class=" col-sm-9 col-md-9 col-lg-10 text-left"> 
-      <h1 id = "busca" >Busca por Linha</h1>
-    </div>
-
-    <div class="container col-sm-9 col-md-9 col-lg-10 ">
+    <div class=" container-fluid col-12 col-sm-8 col-md-8 col-lg-9 col-xl-10 text-left"> 
 		
-			<form id = "barralinha" >
+			<h1 id = "busca" >Busca por Linha</h1>
+			
+			<form id = "barralinha">
 				<div class="row">
-					<div class="col col-sm-8 col-md-8 col-lg-9">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
 						<input type="text" class="form-control" placeholder="Busca por linha">
 					</div>
-					<div class="col col-sm-4 col-md-4 col-lg-3">
+					<div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">
 						<button type="submit" class="btn btn-danger">Filtrar</button>
 						<button type="submit" class="btn btn-danger">Buscar</button>
 					</div>
 				</div>
 			</form>
-		
 		
 			<div  id = "tabelalinhas" >      
 			  <table class="table table-striped">
@@ -75,24 +64,30 @@
 							<td>favoritar</td>
 			      </tr>
 			      <tr>
-			       <td>2</td>
+			        <td>2</td>
 			        <td>usp campos 1</td>
 			        <td>mais informações</td>
-					<td>favoritar</td>
+					    <td>favoritar</td>
 			      </tr>
-				  <tr>
-			       <td>2</td>
+				    <tr>
+			        <td>2</td>
 			        <td>usp campos 1</td>
 			        <td>mais informações</td>
-					<td>favoritar</td>
+					    <td>favoritar</td>
 			      </tr>
-				  <tr>
-			       <td>2</td>
+				    <tr>
+			        <td>2</td>
 			        <td>usp campos 1</td>
 			        <td>mais informações</td>
-					<td>favoritar</td>
+					    <td>favoritar</td>
 						</tr>
 						<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
 								<td>2</td>
 								<td>usp campos 1</td>
 								<td>mais informações</td>
@@ -103,79 +98,32 @@
 									<td>usp campos 1</td>
 									<td>mais informações</td>
 									<td>favoritar</td>
-								</tr>
-								<tr>
-										<td>2</td>
-										<td>usp campos 1</td>
-										<td>mais informações</td>
-										<td>favoritar</td>
-									</tr>
-									<tr>
-											<td>2</td>
-											<td>usp campos 1</td>
-											<td>mais informações</td>
-											<td>favoritar</td>
-										</tr>
-										<tr>
-												<td>2</td>
-												<td>usp campos 1</td>
-												<td>mais informações</td>
-												<td>favoritar</td>
-											</tr>
-											<tr>
-													<td>2</td>
-													<td>usp campos 1</td>
-													<td>mais informações</td>
-													<td>favoritar</td>
-												</tr>
-												<tr>
-														<td>2</td>
-														<td>usp campos 1</td>
-														<td>mais informações</td>
-														<td>favoritar</td>
-													</tr>
-													<tr>
-															<td>2</td>
-															<td>usp campos 1</td>
-															<td>mais informações</td>
-															<td>favoritar</td>
-														</tr>
-														<tr>
-																<td>2</td>
-																<td>usp campos 1</td>
-																<td>mais informações</td>
-																<td>favoritar</td>
-															</tr>
-															<tr>
-																	<td>2</td>
-																	<td>usp campos 1</td>
-																	<td>mais informações</td>
-																	<td>favoritar</td>
-																</tr>
-																<tr>
-																		<td>2</td>
-																		<td>usp campos 1</td>
-																		<td>mais informações</td>
-																		<td>favoritar</td>
-																	</tr>
-																	<tr>
-																			<td>2</td>
-																			<td>usp campos 1</td>
-																			<td>mais informações</td>
-																			<td>favoritar</td>
-																		</tr>
-																		<tr>
-																				<td>2</td>
-																				<td>usp campos 1</td>
-																				<td>mais informações</td>
-																				<td>favoritar</td>
-																			</tr>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
 
 			    </tbody>
 			  </table>
 			</div>
 		
-    </div>
+		</div>
+		
     
   </div>
 </div>
