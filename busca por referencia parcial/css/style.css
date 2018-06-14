@@ -1,0 +1,79 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    height: 7vh;
+}
+
+#logo{
+    color : rgb(173, 14, 14);
+}
+
+
+#carta_imagens{
+    margin: 20px;
+}
+
+
+#login{
+    color : rgb(173, 14, 14);
+}
+
+#busca{
+    text-align: center;
+    color : rgb(173, 14, 14);
+}
+
+#barralinha{
+    padding-left: 3vw;
+    text-align : center;
+}
+
+#tabelareferencias{
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 69vh;
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+.btn-danger{
+    background-color: rgb(173, 14, 14);
+}
+
+.botao{
+    margin-left: 0px;
+}
+
+.btn-danger:hover{
+    background-color: #910707;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 90vh}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #c7c2c2;
+    height: 93vh
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+
+.btn-menu{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
