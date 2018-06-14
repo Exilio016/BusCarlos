@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  node:
+    container_name: app
+    build: .
+    restart: always
+    ports:
+      - "4000:4000"
+    links:
+      - database
+  database:
+    container_name: mysqldb
+    image: mysql:latest
+    volumes:
+      - database:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: buscarlos
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+volumes:
+    database:

@@ -1,6 +1,6 @@
 # To build the image, run, in the following order:
-# docker build -t <SEU_USER_AQUI>/buscarlos:1.00 .
-# docker run -p 4000:4000 --mount type=bind,source="$(pwd)",target=/usr/src/app <ID_DA_IMAGEM_CRIADA_AQUI>
+# docker build -t brunowaldvogel/buscarlos:1.00 .
+# docker run -p 4000:4000 --mount type=bind,source="$(pwd)",target=/usr/src/app brunowaldvogel/buscarlos:1.00
 
 FROM node:carbon
 
