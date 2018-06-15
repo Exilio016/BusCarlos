@@ -9,6 +9,12 @@
     color : rgb(173, 14, 14);
 }
 
+
+#carta_imagens{
+    margin: 20px;
+}
+
+
 #login{
     color : rgb(173, 14, 14);
 }
@@ -23,13 +29,12 @@
     text-align : center;
 }
 
-#tabelalinhas{
+#tabelareferencias{
     margin-left: 7vw;
     margin-right: 7vw;
-    padding-right: 1vw;
     margin-top: 10px;
     overflow-y: scroll;
-    height: 70vh;
+    height: 69vh;
     text-align: center;
 }
 
@@ -49,10 +54,6 @@ th {
     background-color: #910707;
 }
 
-.table-responsive{
- 	 width: 80vw;
-	 overflow-y:auto;
-}
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 90vh}
