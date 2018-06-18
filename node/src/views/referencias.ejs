@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>BusCarlos</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+<%- include partials/head.ejs%>
+<body>
+	<%- include partials/navbar.ejs%>
 
-	<nav class="navbar navbar-expand bg-dark navbar-dark col-12 col-sm-12 col-md-12 col-lg-12 ">
-		<a id = "logo" class="navbar-brand" href="#">BusCarlos</a>
-		<div class="navbar-collapse" id="collapsibleNavbar">
-			<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-				<li class="nav-item">
-					<a id = "login" class="nav-link" href="#">Login</a>
-				</li> 
-			</ul>
-		</div> 
-	</nav>
-  
-<div class="container-fluid">    
-  <div class="row content">
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 sidenav ">
-		<% for(let i = 0; i < nav.length; i++) { %>
-			<a href="<%=nav[i].link%>" class="btn btn-danger btn-block btn-menu"><%=nav[i].title%></a>
-		<% } %>
-    </div>
-
-    <div class=" container-fluid col-12 col-sm-12 col-md-8 col-lg-9 col-xl-10 text-left"> 
+	<div class="container-fluid">
+  		<div class="row content">
+			<%- include partials/sidenav.ejs%>
+    	<div class=" container-fluid col-12 col-sm-12 col-md-8 col-lg-9 col-xl-10 text-left">
 		
 			<h1 id = "busca" >Busca por Referência</h1>
 			
@@ -111,16 +89,18 @@
 						<p class="card-text">Usp Campus 1.</p>
 					  </div>
 					</div>
-				  </div>
-				</div>
-			  </div>
+					</div>
+					</div>
+					</div>
 		
-		</div>
+				</div>
 		
     
-  </div>
-</div>
+  		</div>
+		</div>
+	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
