@@ -29,6 +29,17 @@
     text-align : center;
 }
 
+
+#tabelalinhas{
+    margin-left: 7vw;
+    margin-right: 7vw;
+    padding-right: 1vw;
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 70vh;
+    text-align: center;
+}
+
 #tabelareferencias{
     margin-left: 7vw;
     margin-right: 7vw;
@@ -52,6 +63,11 @@ th {
 
 .btn-danger:hover{
     background-color: #910707;
+}
+
+.table-responsive{
+ 	 width: 80vw;
+	 overflow-y:auto;
 }
 
 
