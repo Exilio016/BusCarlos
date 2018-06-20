@@ -2,20 +2,6 @@ const express = require('express');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
-const mysql = require('mysql');
-
-const con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  port: '3306',
-  database: 'buscarlos',
-});
-
-con.connect((err) => {
-  if (err) throw err;
-  debug('Connected!');
-});
 
 const nav = [{ link: '/linhas', title: 'Busca por Linhas' },
   { link: '/referencias', title: 'Busca por Referencia' },

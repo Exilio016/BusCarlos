@@ -1,10 +1,10 @@
-<%- include partials/head.ejs %>
+<% include partials/head.ejs %>
 <body>
-<%- include partials/navbar.ejs %>
+<% include partials/navbar.ejs %>
 
     <div class="container-fluid">
         <div class="row content">
-            <%- include partials/sidenav.ejs %>
+            <% include partials/sidenav.ejs %>
 
             <div class=" container-fluid col-12 col-sm-8 col-md-8 col-lg-9 col-xl-10 text-left">
 
@@ -16,84 +16,30 @@
                             <input type="text" class="form-control" placeholder="Busca por linha">
                         </div>
                         <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">
-                            <button type="submit" class="btn btn-danger">Filtrar</button>
-                            <button type="submit" class="btn btn-danger">Buscar</button>
+                            <button type="submit" class="btn btn-danger">Procurar</button>
                         </div>
                     </div>
                 </form>
 
                 <div id="tabelalinhas">
-                    <table class="table table-striped">
+                    <table class="table table-hover table-fixed">
                         <thead>
-                        <tr>
-                            <th>Numero</th>
-                            <th>Nome</th>
-                            <th>Info</th>
-                            <th>Favorito</th>
-                        </tr>
+                            <tr>
+                                <th>Numero</th>
+                                <th>Nome</th>
+                                <th>Info</th>
+                                <th>Favorito</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>usp campos 1</td>
-                            <td>mais informações</td>
-                            <td>favoritar</td>
-                        </tr>
-
+                            <%for(let i = 0; i < rows.length; i++) { %>
+                            <tr>
+                                <td class= "text-center"><%=rows[i].numero%></td>
+                                <td class= "text-center"><%=rows[i].nome%></td>
+                                <td class= "text-center">mais informações</td>
+                                <td class= "text-center">favoritar</td>
+                            </tr>
+                            <% }%>
                         </tbody>
                     </table>
                 </div>

@@ -1,15 +1,21 @@
 const express = require('express');
+const mySqlConnection = require('../db/db');
 
 const linhasRouter = express.Router();
 
 function router(nav) {
   linhasRouter.route('/').get((req, res) => {
-    res.render(
-      'linhas',
-      {
-        nav,
-      },
-    );
+    mySqlConnection.query('SELECT * FROM linha', (err, rows) => {
+      if (err) throw err;
+      console.log(rows);
+      res.render(
+        'linhas',
+        {
+          rows,
+          nav,
+        },
+      );
+    });
   });
 
   linhasRouter.route('/:id').get((req, res) => {
