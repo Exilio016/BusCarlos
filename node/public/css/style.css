@@ -6,7 +6,7 @@
 }
 
 #logo{
-    color : rgb(173, 14, 14);
+    color : rgb(255, 255, 255);
 }
 
 
@@ -16,7 +16,7 @@
 
 
 #login{
-    color : rgb(173, 14, 14);
+    color : rgb(255, 255, 255);
 }
 
 #busca{
@@ -25,7 +25,10 @@
 }
 
 #barralinha{
-    padding-left: 3vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     text-align : center;
 }
 

@@ -12,11 +12,8 @@
 
                 <form id="barralinha">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
-                            <input type="text" class="form-control" placeholder="Pesquisar uma linha especifica">
-                        </div>
-                        <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">
-                            <button type="submit" class="btn btn-danger">Procurar</button>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <input type="text" class="form-control" placeholder="Pesquisar uma linha especifica"></input>
                         </div>
                     </div>
                 </form>
@@ -36,7 +33,7 @@
                             <tr>
                                 <td class= "text-center"><%=rows[i].numero%></td>
                                 <td class= "text-center"><%=rows[i].nome%></td>
-                                <td class= "text-center"><a class="btn btn-info">Info</a></td>
+                                <td class= "text-center"><a href="linhas/<%=rows[i].numero%>" class="btn btn-info">Info</a></td>
                                 <td class= "text-center">favoritar</td>
                             </tr>
                             <% }%>
