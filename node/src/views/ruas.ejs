@@ -13,13 +13,13 @@
                 <form id="barralinha">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            <input type="text" class="form-control" placeholder="Pesquisar uma rua especifica">
+                            <input class="form-control" id="buscarua" type="text" placeholder="Buscar ruas especificas...">
                         </div>
                     </div>
                 </form>
 
-                <div id="tabelalinhas">
-                    <table class="table table-striped">
+                <div id="tabelaruas">
+                    <table class="table table-hover table-fixed table-striped">
                         <thead>
                         <tr>
                             <th>Nome da Rua</th>
@@ -30,7 +30,7 @@
                         <%for(let i = 0; i < rows.length; i++) { %>
                         <tr>
                             <td class= "text-center"><%=rows[i].nome%></td>
-                            <td class= "text-center"><a class="btn btn-info">Info</a></td>
+                            <td class= "text-center"><a class="btn btn-danger">Info</a></td>
                         </tr>
                         <% }%>
                         </tbody>
@@ -44,5 +44,15 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("#buscarua").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#tabelaruas tr").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
     </body>
 </html>

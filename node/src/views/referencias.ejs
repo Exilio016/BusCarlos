@@ -12,7 +12,7 @@
 			<form id="barralinha">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <input type="text" class="form-control" placeholder="Pesquisar uma referencia especifica">
+						<input class="form-control" id="buscareferencia" type="text" placeholder="Buscar referências especificas...">
           </div>
         </div>
       </form>
@@ -33,14 +33,14 @@
 					<div class="card mb-4 box-shadow">
 					  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="images/img1.jpg" data-holder-rendered="true">
 					  <div class="card-body">
-						<p class="card-text">Usp Campus 1.</p>
+						<p class="card-text">Usp Campus 2.</p>
 					  </div>
 					</div>
 				  </div><div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
 					<div class="card mb-4 box-shadow">
 					  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="images/img1.jpg" data-holder-rendered="true">
 					  <div class="card-body">
-						<p class="card-text">Usp Campus 1.</p>
+						<p class="card-text">Usp Campus 3.</p>
 					  </div>
 					</div>
 				  </div><div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
@@ -97,6 +97,16 @@
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#buscareferencia").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#tabelareferencias tr").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
 
 </body>
 </html>
