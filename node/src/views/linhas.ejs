@@ -6,7 +6,119 @@
         <div class="row content">
             <%- include partials/sidenav.ejs %>
 
-            
+            <div class=" container-fluid col-12 col-sm-8 col-md-8 col-lg-9 col-xl-10 text-left"> 
+		
+			<h1 id = "busca" >Busca por Linha</h1>
+			
+			<form id = "barralinha">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
+						<input type="text" id="buscalinha" onkeyup="myFunction()" placeholder="Busca por linha" title="Type in a name" class="form-control">
+					</div>
+					<div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">
+						<button type="submit" class="btn btn-danger">Filtrar</button>
+						<button type="submit" class="btn btn-danger">Buscar</button>
+					</div>
+				</div>
+			</form>
+
+			<script>
+				function myFunction() {
+						var input, filter, table, tr, td, i;
+						input = document.getElementById("buscalinha");
+						filter = input.value.toUpperCase();
+						table = document.getElementById("tabelalinhas");
+						tr = table.getElementsByTagName("tr");
+						for (i = 0; i < tr.length; i++) {
+								td = tr[i].getElementsByTagName("td")[1];
+								if (td) {
+								if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+										tr[i].style.display = "";
+								} else {
+										tr[i].style.display = "none";
+								}
+								}       
+						}
+				}
+		</script>
+		
+			<div  id = "tabelalinhas" >      
+			  <table class="table table-striped">
+			    <thead>
+			      <tr>
+			        <th>Numero</th>
+			        <th>Nome</th>
+			        <th>Info</th>
+							<th>Favorito</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>2</td>
+			        <td>usp campos 1</td>
+			        <td>mais informações</td>
+							<td>favoritar</td>
+			      </tr>
+			      <tr>
+			        <td>3</td>
+			        <td>uspento campos 1</td>
+			        <td>mais informações</td>
+					    <td>favoritar</td>
+			      </tr>
+				    <tr>
+			        <td>2</td>
+			        <td>uspinto campos 1</td>
+			        <td>mais informações</td>
+					    <td>favoritar</td>
+			      </tr>
+				    <tr>
+			        <td>2</td>
+			        <td>usp campos 1</td>
+			        <td>mais informações</td>
+					    <td>favoritar</td>
+						</tr>
+						<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
+									<td>2</td>
+									<td>usp campos 1</td>
+									<td>mais informações</td>
+									<td>favoritar</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>usp campos 1</td>
+								<td>mais informações</td>
+								<td>favoritar</td>
+							</tr>
+
+			    </tbody>
+			  </table>
+			</div>
+		
+		</div>
 
 
         </div>
