@@ -43,6 +43,22 @@
     text-align: center;
 }
 
+#tabelaitinerario{
+    padding-right: 1vw;
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 70vh;
+    text-align: center;
+}
+
+#tabelahorarios{
+    padding-right: 1vw;
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 70vh;
+    text-align: center;
+}
+
 #tabelaruas{
     margin-left: 7vw;
     margin-right: 7vw;
@@ -64,6 +80,10 @@
 
 th {
     text-align: center;
+}
+
+.btn{
+    color: white;
 }
 
 .btn-danger{
