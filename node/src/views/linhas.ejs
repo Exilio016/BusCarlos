@@ -19,7 +19,7 @@
                 </form>
 
                 <div id="tabelalinhas">
-                    <table class="table table-hover table-fixed table-striped">
+                    <table class="table table-hover table-fixed">
                         <thead>
                             <tr>
                                 <th>Numero</th>
@@ -52,7 +52,7 @@
         $(document).ready(function(){
           $("#buscalinha").on("keyup", function() {
             var value = $(this).val().toLowerCase();
-            $("#tabelalinhas tr").filter(function() {
+            $("#tabelalinhas tbody tr").filter(function() {
               $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
             });
           });
