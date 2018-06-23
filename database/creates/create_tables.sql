@@ -31,7 +31,7 @@ CREATE TABLE linha_rua (
     nro_linha TINYINT NOT NULL,
     nome_rua VARCHAR(128) NOT NULL,
     ordem_rua TINYINT NOT NULL,
-    CONSTRAINT pk_linha_rua PRIMARY KEY (nro_linha, nome_rua, order_rua),
+    CONSTRAINT pk_linha_rua PRIMARY KEY (nro_linha, nome_rua, ordem_rua),
     CONSTRAINT fk_rua FOREIGN KEY (nome_rua) REFERENCES rua(nome)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
@@ -41,7 +41,7 @@ CREATE TABLE linha_rua (
 );
 
 CREATE TABLE horario (
-    hora TIME NOT NULL,
+    hora VARCHAR(6) NOT NULL,
     dias_semana VARCHAR(64) NOT NULL,
     nro_linha TINYINT NOT NULL,
     nome_rua VARCHAR(128) NOT NULL,
