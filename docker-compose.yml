@@ -1,23 +1,15 @@
 version: '3'
 
 services:
-  mysqldb:
-    container_name: mysqldb
-    build: ./database
-    restart: always
-    ports:
-      - "3307:3306"
-  node:
-    container_name: app
-    build: ./node
-    restart: always
-    ports:
-      - "4000:4000"
-    links:
-      - mysqldb:mysqldb
-    depends_on:
-     - mysqldb
-    environment:
-     - DATABASE_HOST=mysqldb
-    volumes:
-     - ./node:/usr/src/app
+        node:
+                build: ./node
+                ports:
+                        - "4000:4000"
+                depends_on:
+                        - mysql
+                environment:
+                        - DATABASE_HOST=mysql
+                volumes:
+                        - ./node:/app
+        mysql:
+                build: ./database

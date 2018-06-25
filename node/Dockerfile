@@ -5,13 +5,6 @@
 
 FROM node:latest
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 4000
-CMD [ "npm", "start" ]
+ADD start_node.sh /start_node.sh
+RUN chmod 755 /start_node.sh
+CMD [ "/start_node.sh" ]
