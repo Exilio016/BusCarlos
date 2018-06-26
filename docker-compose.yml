@@ -7,9 +7,12 @@ services:
                         - "4000:4000"
                 depends_on:
                         - mysql
+                restart: always
                 environment:
                         - DATABASE_HOST=mysql
                 volumes:
                         - ./node:/app
         mysql:
                 build: ./database
+                ports:
+                        - "3306:3306"
