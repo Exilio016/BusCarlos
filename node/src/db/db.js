@@ -14,20 +14,8 @@ const mySqlConnection = mysql.createConnection({
   port:'3306'
 });
 
-function reconnect(conn){
-  sleep.sleep(1);
-
-  conn = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: 'user',
-    password: 'pass',
-    database: 'buscarlos',
-    port:'3306'
-  });
-}
-
 mySqlConnection.connect((err) => {
-  if (err) reconnect(this);
+  if (err) throw err;
   debug('BusCarlosDB Connected!');
 });
 
