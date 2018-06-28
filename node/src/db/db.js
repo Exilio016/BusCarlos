@@ -1,14 +1,15 @@
 const express = require('express');
 const debug = require('debug')('app');
 const mysql = require('mysql');
+const sleep = require('sleep');
 const bodyparser = require('body-parser');
 
 const app = express();
 
 const mySqlConnection = mysql.createConnection({
-  host: process.env.DATABASE_HOST || '127.0.0.1',
-  user: 'root',
-  password: 'root',
+  host: process.env.DATABASE_HOST,
+  user: 'user',
+  password: 'pass',
   database: 'buscarlos',
   port:'3306'
 });
