@@ -1,0 +1,56 @@
+<% include partials/head.ejs %>
+<body>
+<% include partials/navbar.ejs %>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <% include partials/sidenav.ejs %>
+
+            <div class=" container-fluid col-12 col-sm-8 col-md-8 col-lg-9 col-xl-10 text-left">
+
+                <h1 id="busca">Busca por Trajeto</h1>
+
+                <form id="barralinha">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <input class="form-control" id="buscaOrigem" type="text" placeholder="Buscar rua de origiem...">
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <input class="form-control" id="buscaDestino" type="text" placeholder="Buscar rua de destino...">
+                        </div>
+                    </div>
+                </form>
+
+                <div id="tabelalinhas">
+                    <table class="table table-hover table-fixed">
+                        <thead>
+                            <tr>
+                                <th>Numero</th>
+                                <th>Nome</th>
+                                <th>Info</th>
+                                <th>Favorito</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-body">
+                            <%for(let i = 0; i < rows.length; i++) { %>
+                            <tr>
+                                <td class= "text-center"><%=rows[i].numero%></td>
+                                <td class= "text-center"><%=rows[i].nome%></td>
+                                <td class= "text-center"><a href="linhas/<%=rows[i].numero%>" class="btn btn-danger">Info</a></td>
+                                <td class= "text-center">favoritar</td>
+                            </tr>
+                            <% }%>
+                        </tbody>
+                    </table>
+                </div>
+
+        </div>
+
+
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src ="js/buscarTrajeto.js"></script>
+    </body>
+</html>
