@@ -1,17 +1,19 @@
 const express = require('express');
 const debug = require('debug')('app');
 const mysql = require('mysql');
+const sleep = require('sleep');
 const bodyparser = require('body-parser');
 
 const app = express();
 
 const mySqlConnection = mysql.createConnection({
-  multipleStatements: true,
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'BusCarlosDB',
-  port: '3306',
+
+  host: process.env.DATABASE_HOST,
+  user: 'user',
+  password: 'pass',
+  database: 'buscarlos',
+  port:'3306'
+
 });
 
 mySqlConnection.connect((err) => {
