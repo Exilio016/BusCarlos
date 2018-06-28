@@ -7,11 +7,13 @@ const bodyparser = require('body-parser');
 const app = express();
 
 const mySqlConnection = mysql.createConnection({
+  multipleStatements: true,
   host: process.env.DATABASE_HOST,
   user: 'user',
   password: 'pass',
   database: 'buscarlos',
   port:'3306'
+
 });
 
 mySqlConnection.connect((err) => {

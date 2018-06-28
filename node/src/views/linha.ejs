@@ -16,30 +16,124 @@
 
             <div class=" container-fluid col-12 col-sm-8 col-md-8 col-lg-9 col-xl-10">
 
-                <h1 id="busca">Linha <%= rows[0].numero %> - <%= rows[0].nome %> </h1>
+                <h1 id="busca">Linha <%= rows[0][0].numero %> - <%= rows[0][0].nome %> </h1>
 
                 <h3 id="busca"> HORÁRIOS E ITINERÁRIO </h1>
-                
+
                 <div style="float: left;" class=" container-fluid col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div id="tabelahorarios">
+                        <div class="alert alert-dark" role="alert"><%=rows[1][0].nome_rua%></div>
                         <table class="table table-hover table-sm">
                             <thead>
                                 <tr>
-                                    <th>SEG A SEX</th>
-                                    <th>SAB</th>
-                                    <th>DOM E FERIADOS</th>
+                                    <th></th>
+                                    <th>HORARIOS (SEGUNDA-SEXTA)</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <%for(let i = 0; i < rows.length; i++) { %>
+                                <% let i = 0; while(rows[1][i] && rows[1][i].nome_rua == rows[1][0].nome_rua) { %>
                                 <tr>
-                                    <td> 14:22</td>
-                                    <td> 15:22</td>
-                                    <td> 16:22</td>
+                                    <td><%=rows[1][i++].hora %></td>
+                                    <td><% if(rows[1][i] && rows[1][i].nome_rua == rows[1][0].nome_rua) { %> <%=rows[1][i++].hora %> <% }%> </td>
+                                    <td><% if(rows[1][i] && rows[1][i].nome_rua == rows[1][0].nome_rua) { %> <%=rows[1][i++].hora %> <% }%> </td>
                                 </tr>
                                 <% }%>
                             </tbody>
                         </table>
+                        <table class="table table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>HORARIOS (SABADOS)</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% let aux1 = i; i = 0; while(rows[2][i] && rows[2][i].nome_rua == rows[2][0].nome_rua) { %>
+                                    <tr>
+                                        <td><%=rows[2][i++].hora %></td>
+                                        <td><% if(rows[2][i] && rows[2][i].nome_rua == rows[2][0].nome_rua) { %> <%=rows[2][i++].hora %> <% }%> </td>
+                                        <td><% if(rows[2][i] && rows[2][i].nome_rua == rows[2][0].nome_rua) { %> <%=rows[2][i++].hora %> <% }%> </td>
+                                    </tr>
+                                    <% }%>
+                                </tbody>
+                            </table>
+                            <table class="table table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>HORARIOS (DOMINGOS/FERIADOS)</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% let aux2 = i; i = 0; while(rows[3][i] && rows[3][i].nome_rua == rows[3][0].nome_rua) { %>
+                                        <tr>
+                                            <td><%=rows[3][i++].hora %></td>
+                                            <td><% if(rows[3][i] && rows[3][i].nome_rua == rows[3][0].nome_rua) { %> <%=rows[3][i++].hora %> <% }%> </td>
+                                            <td><% if(rows[3][i] && rows[3][i].nome_rua == rows[3][0].nome_rua) { %> <%=rows[3][i++].hora %> <% }%> </td>
+                                        </tr>
+                                        <% }%>
+                                    </tbody>
+                                </table>
+                        <% if(rows[1][aux1]) { %>
+                        <div class="alert alert-dark" role="alert"><%=rows[1][aux1].nome_rua%></div>
+                        <table class="table table-hover table-sm">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>HORARIOS (SEGUNDA-SEXTA)</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% let aux3 = i; i = aux1; while(i < rows[1].length) { %>
+                                <tr>
+                                    <td><%=rows[1][i++].hora %></td>
+                                    <td><% if(i < rows[1].length) { %> <%=rows[1][i++].hora %> <% }%> </td>
+                                    <td><% if(i < rows[1].length) { %> <%=rows[1][i++].hora %> <% }%> </td>
+                                </tr>
+                                <% }%>
+                            </tbody>
+                        </table>
+                        <table class="table table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>HORARIOS (SABADOS)</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% i = aux2; while(i < rows[2].length) { %>
+                                    <tr>
+                                        <td><%=rows[2][i++].hora %></td>
+                                        <td><% if(i < rows[2].length) { %> <%=rows[2][i++].hora %> <% }%> </td>
+                                        <td><% if(i < rows[2].length) { %> <%=rows[2][i++].hora %> <% }%> </td>
+                                    </tr>
+                                    <% }%>
+                                </tbody>
+                            </table>
+                            <table class="table table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>   </th>
+                                        <th>HORARIOS (DOMINGOS/FERIADOS)</th>
+                                        <th>   </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% i = aux3; while(i < rows[3].length) { %>
+                                        <tr>
+                                            <td><%=rows[3][i++].hora %></td>
+                                            <td><% if(i < rows[3].length) { %> <%=rows[3][i++].hora %> <% }%> </td>
+                                            <td><% if(i < rows[3].length) { %> <%=rows[3][i++].hora %> <% }%> </td>
+                                        </tr>
+                                        <% }%>
+                                </tbody>
+                            </table>
+                            <% }%>
                     </div>
                 </div>
                 <div style="float: left;" class=" container-fluid col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -51,9 +145,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <%for(let i = 0; i < rows.length; i++) { %>
+                                <%for(let i = 0; i < rows[0].length; i++) { %>
                                 <tr>
-                                    <td class= "text-center"><%=rows[i].nome_rua%></td>
+                                    <td class= "text-center"><%=rows[0][i].nome_rua%></td>
                                 </tr>
                                 <% }%>
                             </tbody>

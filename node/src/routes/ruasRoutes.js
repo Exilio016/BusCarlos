@@ -7,7 +7,6 @@ function router(nav) {
   ruasRouter.route('/').get((req, res) => {
     mySqlConnection.query('SELECT * FROM rua', (err, rows) => {
       if (err) throw err;
-      console.log(rows);
       res.render(
         'ruas',
         {
@@ -19,16 +18,17 @@ function router(nav) {
   });
 
   ruasRouter.route('/:id').get((req, res) => {
-    // const { id } = req.params;
-    res.render(
-      // modify in the future for a specific assigned linha
-      'ruas',
-      {
-        nav,
-        // For future use, once the database is established
-        // rua: rua[id],
-      },
-    );
+    const query = 'SELECT lr.nro_linha, l.nome as nome, lr.nome_rua AS nome_rua FROM linha_rua lr JOIN linha l ON l.numero = lr.nro_linha WHERE lr.nome_rua = ? ORDER BY lr.nro_linha';
+    mySqlConnection.query(query, [req.params.id], (err, rows) => {
+      if (err) throw err;
+      res.render(
+        'rua',
+        {
+          rows,
+          nav,
+        },
+      );
+    });
   });
   return ruasRouter;
 }

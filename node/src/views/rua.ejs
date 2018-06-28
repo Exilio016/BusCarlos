@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BusCarlos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<body>
+<% include partials/navbar.ejs %>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <% include partials/sidenav.ejs %>
+
+            <div class=" container-fluid col-12 col-sm-8 col-md-8 col-lg-9 col-xl-10 text-left">
+
+                <h1 id="busca">Linhas que passam por <%= rows[0].nome_rua %></h1>
+
+                <form id="barralinha">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <input class="form-control" id="buscalinha" type="text" placeholder="Procurar linha especifica...">
+                        </div>
+                    </div>
+                </form>
+
+                <div id="tabelaruas">
+                    <table class="table table-hover table-fixed">
+                        <thead>
+                        <tr>
+                            <th>Numero</th>
+                            <th>Nome</th>
+                            <th>Info</th>
+                            <th>Favorito</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <%for(let i = 0; i < rows.length; i++) { %>
+                        <tr>
+                            <td class= "text-center"><%=rows[i].nro_linha%></td>
+                            <td class= "text-center"><%=rows[i].nome%></td>
+                            <td class= "text-center"><a href="../linhas/<%=rows[i].nro_linha%>" class="btn btn-danger">Info</a></td>
+                            <td class= "text-center">favoritar</td>
+                        </tr>
+                        <% }%>
+                        </tbody>
+                    </table>
+                </div>
+
+        </div>
+
+
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("#buscalinha").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#tabelaruas tbody tr").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+    </body>
+</html>
