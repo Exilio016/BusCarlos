@@ -19,6 +19,7 @@ const feedRouter = require('./src/routes/feedRoutes')(nav);
 const ruasRouter = require('./src/routes/ruasRoutes')(nav);
 const caminhosRouter = require('./src/routes/caminhosRoutes')(nav);
 const buscaCaminho = require('./src/routes/buscaCaminho')(nav);
+const loginRouter = require('./src/routes/loginRoutes');
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
@@ -32,6 +33,8 @@ app.use('/favoritos', favoritosRouter);
 app.use('/feed', feedRouter);
 app.use('/caminhos', caminhosRouter);
 app.use('/buscaCaminho', buscaCaminho);
+app.use('/login', loginRouter);
+app.use('/', linhasRouter);
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
