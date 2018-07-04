@@ -56,19 +56,19 @@ CREATE TABLE horario (
 
 CREATE TABLE usuario (
     nome VARCHAR(64) NOT NULL,
-    email VARCHAR(64) NOT NULL,
+    id BIGINT UNSIGNED NOT NULL,
     foto VARCHAR(256),
-    CONSTRAINT pk_usuario PRIMARY KEY (email)
+    CONSTRAINT pk_usuario PRIMARY KEY (id)
 );
 
 CREATE TABLE favorito (
     nro_linha TINYINT NOT NULL,
-    email VARCHAR(64) NOT NULL,
-    CONSTRAINT pk_favorito PRIMARY KEY (nro_linha, email),
+    userID BIGINT UNSIGNED NOT NULL,
+    CONSTRAINT pk_favorito PRIMARY KEY (nro_linha, userID),
     CONSTRAINT fk_favorito_linha FOREIGN KEY (nro_linha) REFERENCES linha(numero)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
-    CONSTRAINT fk_favorito_email FOREIGN KEY (email) REFERENCES usuario(email)
+    CONSTRAINT fk_favorito_user FOREIGN KEY (userID) REFERENCES usuario(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
@@ -76,14 +76,14 @@ CREATE TABLE favorito (
 CREATE TABLE comentario (
     data_hora TIMESTAMP NOT NULL,
     nro_linha TINYINT,
-    email VARCHAR(64) NOT NULL,
+    userID BIGINT UNSIGNED NOT NULL,
     tema VARCHAR(32),
     texto VARCHAR(1024),
-    CONSTRAINT pk_comentario PRIMARY KEY (email, data_hora),
+    CONSTRAINT pk_comentario PRIMARY KEY (userID, data_hora),
     CONSTRAINT fk_comentario_linha FOREIGN KEY (nro_linha) REFERENCES linha(numero)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
-    CONSTRAINT fk_comentario_email FOREIGN KEY (email) REFERENCES usuario(email)
+    CONSTRAINT fk_comentario_user FOREIGN KEY (userID) REFERENCES usuario(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
