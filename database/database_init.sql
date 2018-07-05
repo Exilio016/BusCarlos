@@ -4661,15 +4661,14 @@ INSERT INTO ponto_ref VALUES('RODOVIÁRIA', 'https://user-images.githubuserconte
 INSERT INTO ponto_ref VALUES('CINEMA', 'https://user-images.githubusercontent.com/10467900/42339886-c901aa02-8064-11e8-8461-0a7775271b57.jpg');
 INSERT INTO ponto_ref VALUES('ÁGUA VERMELHA', 'https://user-images.githubusercontent.com/10467900/42339544-a9272c9e-8063-11e8-9ddb-53872c69ad4b.jpg');
 INSERT INTO ponto_ref VALUES('MERCADO MUNICIPAL', 'https://user-images.githubusercontent.com/10467900/42339432-5d551d9e-8063-11e8-9091-b551de6660dd.jpg');
-INSERT INTO ponto_ref VALUES('USFCAR', 'https://user-images.githubusercontent.com/10467900/42339443-60e46fc8-8063-11e8-8900-6537a73e7ec0.JPG');
+INSERT INTO ponto_ref VALUES('UFSCAR', 'https://user-images.githubusercontent.com/10467900/42339443-60e46fc8-8063-11e8-8900-6537a73e7ec0.JPG');
 INSERT INTO ponto_ref VALUES('SHOPPING IGUATEMI', 'https://user-images.githubusercontent.com/10467900/42339438-5ea7f32e-8063-11e8-805d-3e508c91cc14.jpg');
-INSERT INTO ponto_ref VALUES('PRAÇA XV', '');
-INSERT INTO ponto_ref VALUES('SANTA EUDÓXIA', '');
-INSERT INTO ponto_ref VALUES('UNIMED 24H', '');
-INSERT INTO ponto_ref VALUES('COGEB', '');
-INSERT INTO ponto_ref VALUES('LA SALLE', '');
-INSERT INTO ponto_ref VALUES('POUPA TEMPO', '');
-
+INSERT INTO ponto_ref VALUES('PRAÇA XV', ' ');
+INSERT INTO ponto_ref VALUES('SANTA EUDÓXIA', ' ');
+INSERT INTO ponto_ref VALUES('UNIMED 24H', ' ');
+INSERT INTO ponto_ref VALUES('COGEB', ' ');
+INSERT INTO ponto_ref VALUES('LA SALLE', ' ');
+INSERT INTO ponto_ref VALUES('POUPA TEMPO', ' ');
 
 INSERT INTO ref_rua VALUES ('USP 1', 'RUA MIGUEL PETRONI');
 INSERT INTO ref_rua VALUES ('USP 1', 'AVENIDA DOUTOR CARLOS BOTELHO');
@@ -4699,4 +4698,3 @@ INSERT INTO ref_rua VALUES ('MERCADO MUNICIPAL', 'AVENIDA SÃO CARLOS');
 INSERT INTO ref_rua VALUES ('MERCADO MUNICIPAL', 'AVENIDA COMENDADOR ALFREDO MAFFEI');
 INSERT INTO ref_rua VALUES ('MERCADO MUNICIPAL', 'RUA GEMINIANO COSTA');
 INSERT INTO ref_rua VALUES ('UFSCAR', 'UFSCAR');
---INSERT INTO ref_rua VALUES ('NOME', 'RUA');
