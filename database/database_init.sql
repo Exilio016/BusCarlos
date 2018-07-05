@@ -4668,7 +4668,7 @@ INSERT INTO ponto_ref VALUES('SANTA EUDÓXIA', ' ');
 INSERT INTO ponto_ref VALUES('UNIMED 24H', ' ');
 INSERT INTO ponto_ref VALUES('COGEB', ' ');
 INSERT INTO ponto_ref VALUES('LA SALLE', ' ');
-INSERT INTO ponto_ref VALUES('POUPA TEMPO', ' ');
+INSERT INTO ponto_ref VALUES('POUPA TEMPO', 'https://user-images.githubusercontent.com/10467900/42346099-d33a60aa-8077-11e8-8625-8fef12fe80e1.jpeg');
 
 INSERT INTO ref_rua VALUES ('USP 1', 'RUA MIGUEL PETRONI');
 INSERT INTO ref_rua VALUES ('USP 1', 'AVENIDA DOUTOR CARLOS BOTELHO');
