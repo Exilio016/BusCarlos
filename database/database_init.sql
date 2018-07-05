@@ -4645,6 +4645,18 @@ INSERT INTO horario VALUES ('23:15', 'SEGUNDA-SEXTA', 65, 'RUA LUIZ OLLAY');
 INSERT INTO horario VALUES ('23:20', 'SEGUNDA-SEXTA', 1, 'AVENIDA BIBLIOTECA COMUNITÁRIA (UFSCAR)');
 INSERT INTO horario VALUES ('23:30', 'SEGUNDA-SEXTA', 55, 'RUA JOSÉ QUATROCHI');
 
+-- INSERT INTO ponto_ref VALUES('nome', 'link_foto');
+INSERT INTO ponto_ref VALUES('USP 1', 'https://user-images.githubusercontent.com/10467900/42339556-b07e9126-8063-11e8-8ef0-726146d7c96b.jpg');
+INSERT INTO ponto_ref VALUES('USP 2', 'https://user-images.githubusercontent.com/10467900/42339552-ae041894-8063-11e8-8f6e-4f7702be6398.JPG');
+INSERT INTO ponto_ref VALUES('SANTA CASA', 'https://user-images.githubusercontent.com/10467900/42339557-b23bcb6e-8063-11e8-988a-8e7d95c23115.jpg');
+INSERT INTO ponto_ref VALUES('CATEDRAL', 'https://user-images.githubusercontent.com/10467900/42339447-624fcdb2-8063-11e8-8d9a-81033a597506.JPG');
+INSERT INTO ponto_ref VALUES('RODOVIÁRIA', 'https://user-images.githubusercontent.com/10467900/42339513-8ead10cc-8063-11e8-8f18-0b3ce5194ae3.jpg');
+INSERT INTO ponto_ref VALUES('CINEMA', 'https://user-images.githubusercontent.com/10467900/42339886-c901aa02-8064-11e8-8461-0a7775271b57.jpg');
+INSERT INTO ponto_ref VALUES('ÁGUA VERMELHA', 'https://user-images.githubusercontent.com/10467900/42339544-a9272c9e-8063-11e8-9ddb-53872c69ad4b.jpg');
+INSERT INTO ponto_ref VALUES('MERCADO MUNICIPAL', 'https://user-images.githubusercontent.com/10467900/42339432-5d551d9e-8063-11e8-9091-b551de6660dd.jpg');
+INSERT INTO ponto_ref VALUES('USFCAR', 'https://user-images.githubusercontent.com/10467900/42339443-60e46fc8-8063-11e8-8900-6537a73e7ec0.JPG');
+INSERT INTO ponto_ref VALUES('SHOPPING IGUATEMI', 'https://user-images.githubusercontent.com/10467900/42339438-5ea7f32e-8063-11e8-805d-3e508c91cc14.jpg');
+
 INSERT INTO ref_rua VALUES ('USP 1', 'RUA MIGUEL PETRONI');
 INSERT INTO ref_rua VALUES ('USP 1', 'AVENIDA DOUTOR CARLOS BOTELHO');
 INSERT INTO ref_rua VALUES ('USP 2', 'AVENIDA JOÃO DAGNONE');
