@@ -4660,14 +4660,14 @@ INSERT INTO ponto_ref VALUES('CATEDRAL', 'https://user-images.githubusercontent.
 INSERT INTO ponto_ref VALUES('RODOVIÁRIA', 'https://user-images.githubusercontent.com/10467900/42339513-8ead10cc-8063-11e8-8f18-0b3ce5194ae3.jpg');
 INSERT INTO ponto_ref VALUES('CINEMA', 'https://user-images.githubusercontent.com/10467900/42339886-c901aa02-8064-11e8-8461-0a7775271b57.jpg');
 INSERT INTO ponto_ref VALUES('ÁGUA VERMELHA', 'https://user-images.githubusercontent.com/10467900/42339544-a9272c9e-8063-11e8-9ddb-53872c69ad4b.jpg');
-INSERT INTO ponto_ref VALUES('MERCADO MUNICIPAL', 'https://user-images.githubusercontent.com/10467900/42339432-5d551d9e-8063-11e8-9091-b551de6660dd.jpg');
+INSERT INTO ponto_ref VALUES('MERCADO MUNICIPAL', 'https://user-images.githubusercontent.com/18668215/42348784-1253136e-8081-11e8-830c-3fe14a0acb33.png');
 INSERT INTO ponto_ref VALUES('UFSCAR', 'https://user-images.githubusercontent.com/10467900/42339443-60e46fc8-8063-11e8-8900-6537a73e7ec0.JPG');
 INSERT INTO ponto_ref VALUES('SHOPPING IGUATEMI', 'https://user-images.githubusercontent.com/10467900/42339438-5ea7f32e-8063-11e8-805d-3e508c91cc14.jpg');
 INSERT INTO ponto_ref VALUES('PRAÇA XV', 'https://user-images.githubusercontent.com/10467900/42347149-5a4b0830-807b-11e8-95af-48a420aeb50b.jpeg');
-INSERT INTO ponto_ref VALUES('SANTA EUDÓXIA', ' ');
+INSERT INTO ponto_ref VALUES('SANTA EUDÓXIA', 'https://user-images.githubusercontent.com/18668215/42348784-1253136e-8081-11e8-830c-3fe14a0acb33.png');
 INSERT INTO ponto_ref VALUES('UNIMED 24H', 'https://user-images.githubusercontent.com/10467900/42346854-57634110-807a-11e8-8a92-b44811834b3c.png)');
-INSERT INTO ponto_ref VALUES('COGEB', ' ');
-INSERT INTO ponto_ref VALUES('LA SALLE', ' ');
+INSERT INTO ponto_ref VALUES('COGEB', 'https://user-images.githubusercontent.com/18668215/42348784-1253136e-8081-11e8-830c-3fe14a0acb33.png');
+INSERT INTO ponto_ref VALUES('LA SALLE', 'https://user-images.githubusercontent.com/18668215/42348784-1253136e-8081-11e8-830c-3fe14a0acb33.png');
 INSERT INTO ponto_ref VALUES('POUPA TEMPO', 'https://user-images.githubusercontent.com/10467900/42346099-d33a60aa-8077-11e8-8625-8fef12fe80e1.jpeg');
 
 INSERT INTO ref_rua VALUES ('USP 1', 'RUA MIGUEL PETRONI');
