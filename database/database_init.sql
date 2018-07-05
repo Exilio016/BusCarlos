@@ -4663,9 +4663,9 @@ INSERT INTO ponto_ref VALUES('ÁGUA VERMELHA', 'https://user-images.githubuserco
 INSERT INTO ponto_ref VALUES('MERCADO MUNICIPAL', 'https://user-images.githubusercontent.com/10467900/42339432-5d551d9e-8063-11e8-9091-b551de6660dd.jpg');
 INSERT INTO ponto_ref VALUES('UFSCAR', 'https://user-images.githubusercontent.com/10467900/42339443-60e46fc8-8063-11e8-8900-6537a73e7ec0.JPG');
 INSERT INTO ponto_ref VALUES('SHOPPING IGUATEMI', 'https://user-images.githubusercontent.com/10467900/42339438-5ea7f32e-8063-11e8-805d-3e508c91cc14.jpg');
-INSERT INTO ponto_ref VALUES('PRAÇA XV', ' ');
+INSERT INTO ponto_ref VALUES('PRAÇA XV', 'https://user-images.githubusercontent.com/10467900/42347149-5a4b0830-807b-11e8-95af-48a420aeb50b.jpeg');
 INSERT INTO ponto_ref VALUES('SANTA EUDÓXIA', ' ');
-INSERT INTO ponto_ref VALUES('UNIMED 24H', ' ');
+INSERT INTO ponto_ref VALUES('UNIMED 24H', 'https://user-images.githubusercontent.com/10467900/42346854-57634110-807a-11e8-8a92-b44811834b3c.png)');
 INSERT INTO ponto_ref VALUES('COGEB', ' ');
 INSERT INTO ponto_ref VALUES('LA SALLE', ' ');
 INSERT INTO ponto_ref VALUES('POUPA TEMPO', 'https://user-images.githubusercontent.com/10467900/42346099-d33a60aa-8077-11e8-8625-8fef12fe80e1.jpeg');
