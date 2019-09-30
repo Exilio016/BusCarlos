@@ -3,7 +3,7 @@
 # docker build -t brunowaldvogel/buscarlos:1.00 .
 # docker run -p 4000:4000 --mount type=bind,source="$(pwd)",target=/usr/src/app brunowaldvogel/buscarlos:1.00
 
-FROM node:latest
+FROM node:8
 
 ADD start_node.sh /start_node.sh
 RUN chmod 755 /start_node.sh
